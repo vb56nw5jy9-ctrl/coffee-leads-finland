@@ -17,3 +17,4 @@ with open("leads.csv", "w", newline="", encoding="utf-8") as f:
         ])
 
 print("CSV file created.")
+print("CSV file created successfully")
