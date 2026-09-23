@@ -1,0 +1,19 @@
+name: Coffee Leads
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: python coffee_leads.py
+
