@@ -20,3 +20,8 @@ jobs:
 
       - run: python coffee_leads.py
 
+      - name: Upload CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: coffee-leads
+          path: leads.csv
