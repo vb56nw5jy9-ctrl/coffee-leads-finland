@@ -1,10 +1,10 @@
-import requests
+import feedparser
 
-serches = [
-  "new cafe finland",
-  "hotel renovation finland",
-  "barista jobs finland",
-]
+rss = "https://news.google.com/rss/search?q=new+cafe+finland"
 
-for item in searches:
-print(item)
+feed = feedparser.parse(rss)
+
+for entry in feed.entries:
+    print(entry.title)
+    print(entry.link)
+    print("-" * 50)
